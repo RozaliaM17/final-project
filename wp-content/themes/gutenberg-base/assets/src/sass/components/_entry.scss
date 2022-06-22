@@ -1,0 +1,41 @@
+.entry {
+	&-header {
+		margin-block-end: var(--spacing-m);
+	}
+
+	&-title {
+		a {
+			color: var(--color-base-invert);
+			text-decoration: none;
+		}
+	}
+
+	&-meta {
+		margin-block-start: var(--spacing-s);
+	}
+
+	.posted-on {
+		time + time {
+			margin-inline-start: 1em;
+		}
+	}
+
+	&-content {
+		// Some generic styles that we usually need for content:
+		ul {
+			@extend .list-default;
+		}
+
+		ol {
+			@extend .list-default-ordered;
+		}
+	}
+
+	&-footer {
+		margin-block-start: var(--spacing-m);
+	}
+}
+
+.entry-page {
+	// padding-block: var(--spacing-xl);
+}

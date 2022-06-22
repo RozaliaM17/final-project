@@ -1,0 +1,13 @@
+{
+	"apiVersion": 2,
+	"name": "create-block/dxgutenberg-companion",
+	"version": "0.1.0",
+	"title": "Dxgutenberg Companion",
+	"category": "widgets",
+	"icon": "smiley",
+	"description": "Example block written with ESNext standard and JSX support – build step required.",
+	"supports": {
+		"html": false
+	},
+	"textdomain": "dxgutenberg-companion"
+}

@@ -1,0 +1,45 @@
+.layout-blog {
+	display: grid;
+	gap: var(--grid-gap);
+
+	&.layout-blog-left-sidebar {
+		@extend .row;
+		grid-template-areas: "sidebar content";
+		grid-template-columns: 300px 1fr;
+	}
+
+	&.layout-blog-right-sidebar {
+		@extend .row;
+		grid-template-areas: "content sidebar";
+		grid-template-columns: 1fr 300px;
+	}
+
+	&.layout-blog-no-sidebar {
+		@extend .row;
+
+		gap: 0;
+	}
+
+	.blog-content {
+		grid-area: content;
+	}
+
+	.blog-sidebar {
+		grid-area: sidebar;
+	}
+}
+
+// A quick wrap around content for fullscreen styles
+.layout-blog-fullwidth {
+	.entry-header {
+		@extend .row;
+	}
+
+	.entry-content {
+		& > * {
+			@extend .row;
+
+			--row-max-width: var(--site-width-small);
+		}
+	}
+}

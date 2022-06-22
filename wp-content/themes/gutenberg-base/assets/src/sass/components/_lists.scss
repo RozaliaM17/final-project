@@ -1,0 +1,21 @@
+// Our website default unordered list styling.
+// What you'd most likely see in an ul style globally.
+.list-default {
+	li {
+		margin-inline-start: 2em;
+		list-style: disc;
+	}
+}
+
+.list-default-ordered {
+	li {
+		margin-inline-start: 2em;
+		list-style: decimal;
+	}
+}
+
+.list-entries-archive {
+	display: flex;
+	flex-direction: column;
+	gap: calc(var(--spacing-l) * 2);
+}

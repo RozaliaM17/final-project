@@ -1,0 +1,27 @@
+// Wrapper around all widgets inside a sidebar by defualt.
+.widget-area {
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-m);
+}
+
+// Each widget contains the .widget class. A nice handy way to target them :)
+// Some custom widgets might not have it though!
+.widget {
+	.wp-block-group {
+		&__inner-container {
+			// For newer WP versions, we don't have the .widget-title class.
+			h2 {
+				font-size: var(--font-size-h5);
+			}
+		}
+	}
+
+	ul {
+		@extend .list-default;
+	}
+
+	ol {
+		@extend .list-default-ordered;
+	}
+}

@@ -1,0 +1,44 @@
+@import "./blocks/test/editor.scss";
+
+// Styling for the layout settings
+.plugin-sidebar-content {
+	padding: 16px;
+}
+
+.layout-picker-group {
+	display: flex;
+	gap: 1em;
+
+	--color-stroke: #8c8f94;
+	--color-fill: #f0f0f0;
+
+	button {
+		padding: 0;
+		border: none;
+		appearance: none;
+		background: transparent;
+		cursor: pointer;
+
+		&.is-active {
+			--color-stroke: var(--wp-admin-theme-color-darker-10);
+			--color-fill: var(--wp-admin-theme-color-darker-10);
+			color: var(--wp-admin-theme-color-darker-10);
+		}
+	}
+
+	span {
+		margin-top: 0.25em;
+		font-weight: 500;
+		display: block;
+	}
+
+	svg {
+		display: block;
+		width: 100%;
+	}
+
+	& + span {
+		margin-top: 1em;
+		display: block;
+	}
+}

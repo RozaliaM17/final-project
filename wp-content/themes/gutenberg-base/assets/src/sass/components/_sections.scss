@@ -1,0 +1,10 @@
+.section-fullwidth {
+	--section-padding: 5em 0;
+	--section-padding-mobile: 3em 0;
+
+	padding: var(--section-padding);
+
+	@media (max-width: $media-breakpoint-medium) {
+		padding: var(--section-padding-mobile);
+	}
+}

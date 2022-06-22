@@ -1,0 +1,71 @@
+.button {
+	--button-color-background: var(--color-base-near);
+	--button-color-foreground: var(--color-base-invert);
+	--button-padding: 0.25em 0.75em;
+
+	display: inline-block;
+	padding: var(--button-padding);
+	border-radius: var(--border-radius-small);
+	background: var(--button-color-background);
+	color: var(--button-color-foreground);
+
+	&-primary {
+		--button-color-background: var(--color-primary-hsl);
+		--button-color-foreground: var(--color-base);
+	}
+
+	&-accent {
+		--button-color-background: var(--color-accent-hsl);
+		--button-color-foreground: var(--color-base);
+	}
+
+	&-outline {
+		background: transparent;
+		--button-color-foreground: var(--button-color-background);
+		box-shadow: inset 0 0 0 2px var(--button-color-background);
+	}
+}
+
+.button-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	grid-column: 3/4;
+	list-style-type: none;
+
+	.base-button {
+		padding: 8px 25px;
+		color: #FEFEFE;
+		font-size: 16px;
+		font-weight: 700;
+		border: none;
+		outline: none;
+
+		@media (max-width: 1000px) {
+			padding: 7px 20px;
+		}
+
+		&.price-button {
+			padding: 15px 50px;
+
+			&:hover {
+				color: #00235A;
+			}
+		}
+
+	}
+
+	&.service__button-container {
+		align-self: flex-start;
+		margin-top: 20px;
+
+		.base-button {
+			padding: 15px 60px;
+			font-size: 18px;
+
+			@media (max-width: 400px) {
+				padding: 10px 40px;
+			}
+		}
+	}
+}

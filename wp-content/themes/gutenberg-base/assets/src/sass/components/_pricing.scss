@@ -1,0 +1,97 @@
+.pricing-page {
+	background-image: url('../../../assets/src/images/card.png') ;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	padding-bottom: 9%;
+
+	.pricing-section {
+		width: 100%;
+		padding: 10% 0% 12% 0%;
+
+		.pricing-container {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: center;
+			gap: 70px;
+
+			.pricing-plans-container {
+				display: flex;
+				flex-wrap: wrap; 
+				justify-content: center;
+				align-items: center;
+				gap: 30px;
+
+				.pricing-plan {
+					width: 30%;
+					display: flex;
+					flex-direction: column;
+					justify-content: flex-start;
+					align-items: center;
+					gap: 30px;
+					padding: 40px 0px;
+					color: #FEFEFE;
+					box-shadow: 0px 19px 33px rgba(111, 109, 113, 0.07);
+
+					@media (max-width: 700px) {
+						width: 47%;
+					}
+
+					@media (max-width: 530px) {
+						width: 90%;
+					}
+
+
+					.plan__name {
+						font-size: 18px;
+					}
+
+					.plan__description {
+						width: 75%;
+						font-size: 14px;
+						text-align: center;
+
+						@media (max-width: 700px) {
+							font-size: 16px;
+						}
+
+						@media (max-width: 530px) {
+							width: 50%;
+						}
+
+
+					}
+
+					.plan__price {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						gap: 10px;
+
+						.__price-currency {
+							font-size: 22px;
+						}
+
+						.__price-value {
+							font-size: 55px;
+						}
+					}
+
+					&.__main {
+						border-bottom: 5px solid #fefefe;
+
+						.price-button {
+							color: #00235A;
+							background-color: #FEFEFE;
+
+							&:hover {
+								color: #FF5E14;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

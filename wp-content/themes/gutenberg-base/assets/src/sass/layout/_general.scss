@@ -1,0 +1,43 @@
+.row {
+	--row-max-width: var(--site-width-large);
+
+	max-width: var(--row-max-width);
+	margin-left: auto;
+	margin-right: auto;
+
+	// Below is a fluid layout of the website:
+	// @media (max-width: #{$media-breakpoint-large}) {
+	// 	max-width: calc(100vw - 2em);
+	// }
+
+	// And here, we have an adaptive version:
+	@media (max-width: #{$media-breakpoint-large}) {
+		max-width: Min(var(--site-width-medium), var(--row-max-width));
+	}
+
+	@media (max-width: #{$media-breakpoint-medium}) {
+		max-width: Min(var(--site-width-small), var(--row-max-width));
+	}
+
+	@media (max-width: #{$media-breakpoint-small}) {
+		max-width: Min(var(--site-width-mobile), var(--row-max-width));
+	}
+
+	@media (max-width: #{$media-breakpoint-mobile}) {
+		max-width: calc(100% - 2rem);
+	}
+}
+
+.row-fullwidth {
+	max-width: calc(100% - 2rem);
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.site-content {
+	margin-top: 17.5%;
+
+	@media (max-width: 600px) {
+		margin-top: 22.5%;
+	}
+}

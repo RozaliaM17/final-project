@@ -1,0 +1,12 @@
+// The component that holds the heading title of regular posts.
+// Seen mainly in the default WP pages like archive, index.php, 404.
+
+.page-header {
+	border-bottom: 1px solid var(--color-separator-base);
+	padding-block-end: var(--spacing-m);
+	margin-block-end: var(--spacing-m);
+
+	.page-title {
+		font-size: var(--font-size-h3);
+	}
+}

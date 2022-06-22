@@ -1,0 +1,8 @@
+.entry-page {
+}
+
+.page {
+	.post-navigation {
+		@extend .row;
+	}
+}

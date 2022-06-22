@@ -1,0 +1,30 @@
+.partners-section {
+	.partners-wraper {
+		width: 80%;
+		margin: 0 auto;
+		background-image: url('../../../assets/src/images/w-card.png') ;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		height: 100%;
+		overflow: hidden;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		@media (max-width: 900px) {
+			width: 100%;
+		}
+
+		@media (max-width: 600px) {
+			background-size: contain;
+		}
+
+		.partnets-logo-container {
+			width: 100%;
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+			padding: 40px 0px;
+		}
+	}
+}
