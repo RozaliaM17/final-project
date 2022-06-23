@@ -8,3 +8,11 @@
 		padding: var(--section-padding-mobile);
 	}
 }
+
+.inner-section {
+	padding: 10% 0%;
+
+	@media (min-width: 1500px) {
+		padding: 5% 0%;
+	}
+}

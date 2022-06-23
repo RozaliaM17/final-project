@@ -10,41 +10,26 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'entry ' ); ?>>
-	<header class="entry-header">
-		<?php
-			if ( is_single() ) {
-				the_title( '<h1 class="entry-title">', '</h1>' );
-			} else {
-				the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-			}
-
-		if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php dxgutenberg_posted_on(); ?>
-		</div><!-- .entry-meta -->
-		<?php
-		endif; ?>
-	</header><!-- .entry-header -->
-
-	<div class="entry-content">
-		<?php
-			get_template_part( 'template-parts/content', 'hero' );
-			get_template_part( 'template-parts/content', 'about');
-			the_content( sprintf(
-				/* translators: %s: Name of current post. */
-				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'dxgutenberg' ), array( 'span' => array( 'class' => array() ) ) ),
-				the_title( '<span class="screen-reader-text">"', '"</span>', false )
-			) );
-
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'dxgutenberg' ),
-				'after'  => '</div>',
-			) );
-
-		?>
-	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-		<?php dxgutenberg_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+	<div class="post__preview-container">
+		<div class="post__image-container">
+			<img class="post__image" src="../../wp-content/themes/gutenberg-base/assets/dist/images/content.jpg">
+		</div>
+		<div class="post__content-container">
+			<h2 class="post__title uppercase-headings bold-text">Laborum magna nulla</h2>
+			<p class="post__paragraph">Nulla Lorem mollit cupidatat irure. Voluptate exercitation incididunt aliquip deserunt. Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Volup Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation deserunt... </p>
+			<div class="post__details-container">
+				<div class="post_details">
+					<img class="post__author-image" src="../../wp-content/themes/gutenberg-base/assets/dist/images/content.jpg">
+					<div class="post__information">
+						<span class="post__author">Paula Ramsey</span>
+						<span class="post__date">September 24, 2020</span>
+					</div>
+				</div>
+				<div class="post__redirection-container">
+					<i class="fa-solid fa-bookmark"></i>
+					<i class="fa-solid fa-ellipsis"></i>
+				</div>
+			</div>
+		</div>
+	</div>
 </article><!-- #post-## -->

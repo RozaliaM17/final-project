@@ -1,0 +1,11 @@
+.contact-input {
+	width: 80%;
+	border: none;
+	outline: none;
+	color: #00235A;
+	background-color: transparent;
+
+	@media (min-width: 1500px) {
+		font-size: 28px;
+	}
+}

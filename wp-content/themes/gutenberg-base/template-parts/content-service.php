@@ -1,8 +1,8 @@
 <div class="hero-section hero-section__service">
 	<div class="hero-figure-container hero-service">
 		<div class="hero-figure__content hero-figure__service">
-			<h3 class="__section-category">Service</h3>
-			<h2 class="__section-title">Laboris commodo consequat</h2>
+			<h3 class="__section-category uppercase-headings bold-text">Service</h3>
+			<h2 class="__section-title uppercase-headings bold-text">Laboris commodo consequat</h2>
 			<div class="figure__content-container">
 				<div class="figure__content">
 					<div class="image-container">

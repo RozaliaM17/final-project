@@ -4,6 +4,10 @@
   max-width: 1000px;
   margin: 0 auto;
 
+  @media (min-width: 1500px) {
+    padding: 2% 0% 5% 0%;
+  }
+
   .card-slider__container {
     margin: 0 auto;
     background-image: url('../../../assets/src/images/card-slider-background.png') ;
@@ -69,7 +73,7 @@
         &.active {
           opacity: 1;
           visibility: visible;
-          right: 0px;
+          right: 0px;  
         }
 
         .slider-card__image {
@@ -105,6 +109,15 @@
             font-size: 18px;
             margin: 0px;
 
+            q {
+               quotes: "“" "”";
+            }
+
+            @media (min-width: 1500px) {
+              font-size: 25px;
+              width: 100%;
+            }
+
             @media (max-width: 800px) {
               width: 100%;
               font-size: 16px;
@@ -120,10 +133,18 @@
 
             .card__author-name {
               font-size: 20px;
+
+              @media (min-width: 1500px) {
+                font-size: 24px;
+              }
             }
 
             .card__author-position {
               font-size: 16px;
+
+              @media (min-width: 1500px) {
+                font-size: 20px;
+              }
             }
           }
         }

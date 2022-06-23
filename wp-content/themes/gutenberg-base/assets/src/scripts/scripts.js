@@ -42,11 +42,18 @@ document.addEventListener(
 		  } else if (window.scrollY < 33) {
 		    pageHeader.classList.remove("scroll");
 		  }
-		  if (window.innerWidth < 800) {
+		  if (window.innerWidth < 800 && window.innerWidth > 500) {
+		  	console.log("hre")
 		  	if (pageHeader.classList.contains('scroll')) {
 		  		mobileMenu.style.top = (pageHeaderHeight - 33) + 'px';
 		  	} else {
 		  		mobileMenu.style.top = pageHeaderHeight + 'px';
+		  	}
+		  } else if (window.innerWidth <= 500) {
+		  	if (pageHeader.classList.contains('scroll')) {
+		  		mobileMenu.style.top = (pageHeaderHeight - 33) + 'px';
+		  	} else {
+		  		mobileMenu.style.top = (pageHeaderHeight + 10) + 'px';
 		  	}
 		  }
 		}

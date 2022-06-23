@@ -6,8 +6,8 @@
 		padding: 10% 4%;
 		color: #fff;
 
-		@media (max-width: 900px) {
-			padding: 5% 2% 5% 3%;
+		@media (min-width: 1400px) {
+			padding: 4%;
 		}
 
 		.footer-columns-wraper {
@@ -70,7 +70,21 @@
 					a {
 						border-radius: 0px;
 						width: 80%;
+						box-shadow: 0px 5px 10px #ff5e149c;
+						transition: all .3s;
+						cursor: pointer;
+						border-bottom: 4px solid #ff5e14;
 
+						&:hover {
+							box-shadow: 9px 9px 30px -5px #ff5000cc;
+							transform: scale(1.03);
+						}
+
+						&:active {
+							box-shadow: 0px 4px 8px #fbaa85;
+							transform: scale(.98);
+						}
+						
 						@media (max-width: 900px) {
 							width: 60%;
 							font-size: 16px;

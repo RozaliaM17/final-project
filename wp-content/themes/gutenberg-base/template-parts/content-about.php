@@ -1,4 +1,4 @@
-<section class="about-section">
+<div class="about-section">
 		<div class="row about-wraper">
 			<div class="about-information-container">
 				<div class="about__header">
@@ -27,4 +27,4 @@
 				</div>
 			</div>
 		</div>
-</section>
+</div>
