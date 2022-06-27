@@ -207,3 +207,26 @@ if( function_exists('acf_add_options_page') ) {
 	acf_add_options_page();
 	
 }
+
+
+function wp_custom_pagination($args = [], $class = 'pagination') {
+
+    if ($GLOBALS['wp_query']->max_num_pages <= 1) return;
+
+    $args = wp_parse_args( $args, [
+        'mid_size'           => 2,
+        'prev_next'          => false,
+        'screen_reader_text' => __('Posts navigation', 'textdomain'),
+    ]);
+
+    $links     = paginate_links($args);
+    $next_link = get_next_posts_link($args['next_text']);
+    $prev_link = get_previous_posts_link($args['prev_text']);
+    $template  = apply_filters( 'navigation_markup_template', '
+    <nav class="navigation %1$s" role="navigation">
+        <div class="nav-links">%3$s<div class="page-numbers-container">%4$s</div>%5$s</div>
+    </nav>', $args, $class);
+
+    echo sprintf($template, $class, $args['screen_reader_text'], $prev_link, $links, $next_link);
+
+}

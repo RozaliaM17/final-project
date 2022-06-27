@@ -36,7 +36,7 @@ get_header(); ?>
 
 				endwhile; // End of the loop.
 				?>
-
+			<?php wp_reset_postdata(); ?>
 			</main>
 		</div>
 	</section>

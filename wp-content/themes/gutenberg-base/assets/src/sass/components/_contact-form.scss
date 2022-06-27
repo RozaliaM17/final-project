@@ -2,11 +2,7 @@
 	width: 100%;
 
 	.contact-container {
-		display: flex;
-		flex-direction: column;
-		justify-content: flex-start;
-		align-items: center;
-		gap: 60px;
+		@include flex (column, 60px, flex-start, center);
 
 		.form-information {
 			color: #00235A;
@@ -24,11 +20,7 @@
 
 		.contact-form-container {
 			width: 100%;
-			display: flex;
-			flex-direction: column;
-			justify-content: flex-start;
-			align-items: center;
-			gap: 130px;
+			@include flex (column, 130px, flex-start, center);
 
 			@media (max-width: 500px) {
 				gap: 65px;
@@ -36,23 +28,14 @@
 
 			.contact-form {
 				width: 100%;
-				display: grid;
-				grid-template-columns: 1fr 1fr;
-				grid-template-rows: 0.5fr 2fr;
-				justify-content: center;
-				align-items: center;
-				gap: 30px;
+				@include grid (1fr 1fr, 0.5fr 2fr, 30px, center, center);
 
 				@media (max-width: 500px) {
-					grid-template-columns: 1fr;
-					grid-template-rows: 0.5fr 0.5fr 2fr;
-					gap: 20px;
+					@include grid (1fr, 0.5fr 0.5fr 2fr, 20px, center, center);
 				}
 
 				.user-info-container {
-					display: flex;
-					justify-content: space-between;
-					align-items: center;
+					@include flex (row, 0px, space-between, center);
 					background-color: #F5F6FB;
 					padding: 15px 25px;
 

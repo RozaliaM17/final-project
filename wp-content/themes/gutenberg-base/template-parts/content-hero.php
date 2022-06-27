@@ -1,4 +1,4 @@
-<?php if(is_page_template('templates/homepage.php')) { ?>
+<?php if(is_page_template('front-page.php')) { ?>
 		<div class="hero-section hero-section__home">
 			<div class="hero-figure-container hero-home">
 				<div class="hero-figure__content" id="hero-figure__home">

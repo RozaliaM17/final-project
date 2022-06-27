@@ -8,6 +8,7 @@
 @import "base/settings";
 @import "base/normalize";
 @import "base/general";
+@import "base/_mixins";
 
 // Separating the largest parts of the site in specific files.
 @import "layout/general";
@@ -28,7 +29,6 @@
 @import 'components/_contact-form';
 @import 'components/_pricing';
 @import 'components/_blog';
-@import 'components/_blog-single';
 @import 'components/_widgets';
 @import "components/sections";
 @import "components/elements";
@@ -42,6 +42,8 @@
 
 // Default page styles. In our case, that includes Gutenberg as well.
 @import "pages/page";
+@import "pages/_single";
+@import "pages/_archive";
 
 // Gutenberg specific styling that the theme supports. Here, you can also
 // add custom block styles.

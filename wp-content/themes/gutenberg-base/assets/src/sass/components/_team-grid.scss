@@ -2,16 +2,10 @@
 	width: 100%;
 
 	.team-container {
-		display: flex;
-		flex-direction: column;
-		justify-content: flex-start;
-		align-items: center;
-		gap: 40px;
+		@include flex (column, 40px, flex-start, center);
 
 		.team-card__grid {
-			display: grid;
-			grid-template-columns: repeat(2, minmax(200px, 460px));
-			gap: 30px;
+			@include grid (repeat(2, minmax(200px, 460px)), unset, 30px, unset, unset);
 
 			@media (max-width: 800px) {
 				gap: 20px;
@@ -22,10 +16,7 @@
 			}
 
 			.team-card {
-				display: flex;
-				flex-direction: column;
-				justify-content: flex-start;
-				align-items: center;
+				@include flex (column, 0px, flex-start, center);
 				filter: drop-shadow(0px 19px 33px rgba(111, 109, 113, 0.13));
 
 				.team-card__image-container {
@@ -43,25 +34,18 @@
 				}
 
 				.team-card__information-container {
-					display: flex;
-					justify-content: space-between;
-					align-items: center;
+					@include flex (column, 10px, space-between, center);
 					color: #00235A;
 					background-color: #fff;
 					padding: 35px;
 					width: 100%;
-					gap: 10px;
 
 					@media (max-width: 800px) {
 						padding: 25px;
 					}
 
 					.team-card__member {
-						display: flex;
-						flex-direction: column;
-						justify-content: flex-start;
-						align-items: flex-start;
-						gap: 10px;
+						@include flex (column, 10px, flex-start, flex-start);
 
 						.__member-name {
 							font-size: 20px;

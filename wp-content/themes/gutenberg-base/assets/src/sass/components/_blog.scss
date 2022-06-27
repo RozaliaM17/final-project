@@ -2,42 +2,40 @@
 	width: 100%;
 
 	.blog-container {
-		display: flex;
-		flex-direction: column;
-		justify-content: flex-start;
-		align-items: flex-start;
-		gap: 50px;
+		@include flex (column, 50px, flex-start, flex-start);
 
 		.__video-container {
 			width: 100%;
-			height: 450px;
+			height: 70%;
 			background-color: #DDDDDD;
-
-			@media (max-width: 600px) {
-				height: 300px;
-			}
 		}
 
 		.section-information {
 			color: #00235A;
+			width: 95%;
 
-			.__section-title {
-				font-size: 28px;
+			h2 {
+				font-size: 32px;
+
+				@media (min-width: 1700px) {
+					font-size: 45px;
+				}
+
 			}
 
-			.__seciton-paragraph {
+			p {
 				margin: 0;
 				text-align: start;
 				width: 100%;
+
+				@media (min-width: 1700px) {
+					font-size: 26px;
+				}
 			}
 		}
 
 		.__posts-grid {
-			display: flex;
-			flex-direction: column;
-			justify-content: flex-start;
-			align-items: flex-start;
-			gap: 30px;
+			@include flex (column, 30px, flex-start, flex-start);
 
 			.post__preview-container {
 				width: 90%;
@@ -70,6 +68,7 @@
 					.post__image {
 						width: 100%;
 						height: 100%;
+						cursor: pointer;
 
 						@media (max-width: 700px) {
 							width: 90%;
@@ -82,10 +81,8 @@
 				}
 
 				.post__content-container {
-					display: flex;
-					flex-direction: column;
-					justify-content: flex-start;
-					align-items: flex-start;
+					width: 100%;
+					@include flex (column, 25px, space-around, flex-start);
 					color: #00235A;
 					margin: 0 auto;
 
@@ -98,20 +95,30 @@
 					}
 
 					.post__title {
-						font-size: 25px;
+						line-height: 1;
+						font-size: 20px;
+						text-decoration: none;
+						cursor: pointer;
 
-						@media (max-width: 800px) {
-							font-size: 22px;
+						@media (min-width: 1700px) {
+							font-size: 24px;
 						}
 
-						@media (max-width: 440px) {
+						@media (max-width: 800px) {
 							font-size: 18px;
 						}
 
+						@media (max-width: 440px) {
+							font-size: 16px;
+						}
 					}
 
-					.post__paragraph {
+					.post__paragraph-container p {
 						font-size: 16px;
+
+						@media (min-width: 1700px) {
+							font-size: 22px;
+						}
 
 						@media (max-width: 800px) {
 							font-size: 14px;
@@ -121,43 +128,56 @@
 
 				.post__details-container {
 					width: 100%;
-					display: flex;
-					justify-content: space-between;
-					align-items: center;
+					@include flex (row, 0px, space-between, center);
 					border-top: 3px solid #EBE9ED;
 					padding-top: 20px;
 
 					.post_details {
-						display: flex;
-						justify-content: flex-start;
-						align-items: center;
-						gap: 10px;
+						@include flex (row, 10px, flex-start, center);
 
 						.post__author-image {
 							width: 35px;
 							height: 35px;
 							border-radius: 50%;
+							cursor: pointer;
+
+							@media (min-width: 1700px) {
+								width: 50px;
+								height: 50px;	
+							}
 						}
 
 						.post__information {
-							display: flex;
-							flex-direction: column;
-							justify-content: space-between;
-							align-items: flex-start;
+							@include flex (column, 0px, space-between, flex-start);
 							color: #00235A;
 							font-size: 14px;
+							cursor: pointer;
+
+							@media (min-width: 1700px) {
+								font-size: 24px;
+							}
+
+							.post__author a {
+								text-decoration: none;
+
+								&:hover {
+									color: #FF5E14;
+								}
+							}
 						}
 					}
 
 					.post__redirection-container {
-						display: flex;
-						justify-content: center;
-						align-items: center;
-						gap: 15px;
+						@include flex (row, 15px, center, center);
 
 						.post__redirection-icon {
 							color: #6F6D71;
 							font-size: 18px;
+							cursor: pointer;
+
+							@media (min-width: 1700px) {
+								font-size: 24px;
+							}
 
 							&:hover {
 								color: #FF5E14;
@@ -170,54 +190,156 @@
 
 		.pagination-container {
 			width: 90%;
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
+			@include flex (row, 0px, center, center);
 
 			@media (max-width: 990px) {
 				width: 100%;
 			}
 
-			.pagination-button {
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				gap: 10px;
-				color: #fefefe;
-				border: none;
-				padding: 10px 20px;
-				font-size: 16px;
-				box-shadow: 0px 5px 10px #ff5e149c;
-				transition: all .3s;
-				cursor: pointer;
-				border-bottom: 4px solid #ff5e14;
-				max-width: 25%;
+			.pagination {
+				width: 100%;
 
-				&:hover {
-					box-shadow: 9px 9px 30px -5px #ff5000cc;
-					transform: scale(1.03);
+				.nav-links {
+					@include grid (0.4fr 3fr 0.4fr, unset, 0px, center, center);
+					position: relative;
+					margin-top: 40px;
+
+					& > a {
+						@include flex (row, 10px, center, center);
+						color: #fefefe;
+						background-color: #FF5E14;
+						border: none;
+						font-size: 16px;
+						box-shadow: 0px 5px 10px #ff5e149c;
+						transition: all .3s;
+						cursor: pointer;
+						text-decoration: none;
+
+						&:hover {
+							box-shadow: 9px 9px 30px -5px #ff5000cc;
+							transform: scale(1.03);
+						}
+
+						&:active {
+							box-shadow: 0px 4px 8px #fbaa85;
+							transform: scale(.98);
+						}
+
+						@media (max-width: 500px) {
+							font-size: 14px;
+							padding: 10px 15px;
+						}
+
+						&:first-child {
+							grid-column: 1/2;
+							padding: 10px 30px 10px 50px;
+
+							@media (max-width: 600px) {
+								padding: 10px 20px 10px 35px;
+							}
+
+							@media (max-width: 500px) {
+								padding: 10px 15px 10px 30px;
+							}
+						}
+
+						&:first-child:before {
+							content: '\2190';
+							position: absolute;
+							top: -10px;
+							left: 13px;
+							font-size: 35px;
+							color: #fff;
+
+
+							@media (max-width: 600px) {
+								top: 2px;
+								left: 11px;
+								font-size: 23px;
+							}
+
+							@media (max-width: 500px) {
+								left: 7px;
+								top: 0px;
+							}
+						}
+
+						&:last-child {
+							grid-column: 3/4;
+							padding: 10px 50px 10px 30px;
+
+							@media (max-width: 600px) {
+								padding: 10px 35px 10px 20px;
+							}
+
+							@media (max-width: 500px) {
+								padding: 10px 30px 10px 15px;
+							}
+						}
+
+						&:last-child:after {
+							content: '\2192';
+							position: absolute;
+							top: -10px;
+							right: 13px;
+							font-size: 35px;
+							color: #fff;
+
+							@media (max-width: 600px) {
+								top: 2px;
+								right: 11px;
+								font-size: 23px;
+							}
+
+							@media (max-width: 500px) {
+								right: 7px;
+								top: 0px;
+							}
+						}
+
+					}
+
+					.page-numbers-container {
+						grid-column: 2/3;
+						@include flex (row, 20px, center, center);
+
+						@media (max-width: 500px) {
+							gap: 5px;
+						}
+
+						.page-numbers {
+							display: inline-block;
+							padding: 5px 10px;
+							line-height: 1;
+							text-decoration: none;
+							border-radius: 2px;
+							font-weight: 400;
+							color: #00235A;
+							opacity: 0.6;
+							font-size: 18px;
+
+							@media (max-width: 500px) {
+								font-size: 16px;
+							}
+
+							&:hover {
+								font-weight: 700;
+								opacity: 1;
+							}
+
+							&.current {
+							color: #FF5E14;
+							opacity: 1;
+							cursor: pointer;
+							font-weight: 700;
+							}
+
+						}
+					}
+
 				}
 
-				&:active {
-					box-shadow: 0px 4px 8px #fbaa85;
-					transform: scale(.98);
-				}
-
-				@media (max-width: 500px) {
-					font-size: 14px;
-					padding: 10px 15px;
-				}
 			}
-
-			.pagination-pages {
-				width: 40%;
-				display: flex;
-				justify-content: space-between;
-				align-items: center;
-				color: #00235A;
-				font-size: 16px;
-			}
-
 		}
 	}
 }

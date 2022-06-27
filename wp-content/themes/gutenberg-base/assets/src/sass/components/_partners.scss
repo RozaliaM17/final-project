@@ -8,9 +8,7 @@
 		background-size: cover;
 		height: 100%;
 		overflow: hidden;
-		display: flex;
-		justify-content: center;
-		align-items: center;
+		@include flex (row, 0px, center, center);
 
 		@media (max-width: 900px) {
 			width: 100%;
@@ -22,8 +20,7 @@
 
 		.partnets-logo-container {
 			width: 100%;
-			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+			@include grid (repeat(auto-fit, minmax(120px, 1fr)), unset, 0px, unset, unset);
 			padding: 40px 0px;
 		}
 	}

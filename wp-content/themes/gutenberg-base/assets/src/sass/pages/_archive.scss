@@ -1,0 +1,25 @@
+.page-header {
+	@include flex (column, 20px, flex-start, flex-start);
+	width: 90%;
+
+	@media (max-width: 1000px) {
+		width: 100%;
+	}
+
+	.page-title {
+		width: 80%;
+
+		@media (max-width: 1000px) {
+			width: 100%;
+		}
+	}
+
+	.taxonomy-description {
+		width: 80%;
+
+		@media (max-width: 1000px) {
+			width: 100%;
+		}
+	}
+
+}

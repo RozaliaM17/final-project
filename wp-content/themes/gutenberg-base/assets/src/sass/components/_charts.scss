@@ -19,19 +19,13 @@
   }
 
   .projects-wraper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
+    @include flex (column, 40px, center, center);
   }
 }
 
 .charts-wrapper {
-  display: flex;
+  @include flex (row, 0px, center, center);
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
   
   @media (max-width: 600px) {
     gap: 30px 10px;
@@ -40,11 +34,7 @@
   .single-chart {
     width: 33%;
     position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+    @include flex (column, 20px, center, center);
 
     @media (max-width: 600px) {
       width: 45%;
@@ -56,9 +46,7 @@
 
     .chart {
       position: relative;
-      display: flex;  
-      justify-content: center;
-      align-items: center;
+      @include flex (row, 0px, center, center);
       width: 80%;
       margin: 0 auto;
 
@@ -127,11 +115,7 @@
     }
 
     .chart-information {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 5px;
+      @include flex (column, 5px, center, center);
       color: #FEFEFE;
 
       .chart__title {
