@@ -28,6 +28,8 @@
 @import 'components/_team-grid';
 @import 'components/_contact-form';
 @import 'components/_pricing';
+@import 'components/_block-grid';
+@import 'components/projects';
 @import 'components/_blog';
 @import 'components/_widgets';
 @import "components/sections";
@@ -43,6 +45,7 @@
 // Default page styles. In our case, that includes Gutenberg as well.
 @import "pages/page";
 @import "pages/_single";
+@import "pages/_single-project";
 @import "pages/_archive";
 
 // Gutenberg specific styling that the theme supports. Here, you can also

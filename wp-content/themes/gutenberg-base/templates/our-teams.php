@@ -1,6 +1,6 @@
 <?php 
 /**
-* Template Name: About Page
+* Template Name: Team Page
 *
 * @package WordPress
 * @subpackage Twenty_Fourteen
@@ -19,18 +19,15 @@ if ( ! empty ( $post_metadata['dxgc_layout_picker'][0] ) ) {
 get_header(); ?>
 
 	<section class="section-page-fullscreen">
-			<main class="blog-content">
-
+			<main class="blog-content ">
 				<?php
 				while ( have_posts() ) : the_post();	
-					get_template_part( 'template-parts/content', 'hero', array( 'page' => 'about' ));
-					get_template_part( 'template-parts/content', 'about' ); 
 					get_template_part( 'template-parts/content', 'team__grid' ); 
+					get_template_part( 'template-parts/content', 'partners' );
 					get_template_part( 'template-parts/content', 'blog__slider' );
 
 				endwhile; // End of the loop.
 				?>
-
 			</main>
 	</section>
 

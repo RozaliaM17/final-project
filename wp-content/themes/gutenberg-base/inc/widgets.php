@@ -20,6 +20,12 @@
 			'description'   => '',
 		) );
 
+		register_sidebar( array(
+			'name'          => esc_html__( 'Hero-404', 'dxgutenberg' ),
+			'id'            => 'hero-404',
+			'description'   => '',
+		) );
+
 
 		// Footer columns
 

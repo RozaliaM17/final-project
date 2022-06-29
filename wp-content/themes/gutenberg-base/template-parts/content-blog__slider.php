@@ -8,7 +8,7 @@
 		<?php $args = array(
 			'post_type'      => 'post',
 			'post_status'    => 'publish',
-			'posts_per_page' => 3,
+			'posts_per_page' => 7,
 		); 
 		$the_query = new WP_Query( $args ); ?>
 
@@ -16,12 +16,11 @@
 			<?php while($the_query->have_posts() ) {
 				$the_query->the_post(); ?>
 				<div class="box">
-					<a href="<?php the_permalink(); ?>">
+					<a class="blog-post__image-container" href="<?php the_permalink(); ?>">
 						<img class="slider-card__image" src="<?php the_post_thumbnail_url()?>">
 					</a>
 					<div class="blog-post__information-container">
 						<h3 class="post__category uppercase-headings blod-text"><?php the_category(); ?></h3>
-						<a href="<?php the_permalink(); ?>">
 							<h2 class="post__title uppercase-headings bold-text">
 								<a href="<?php the_permalink(); ?>" title="">
 									<?php the_title(); ?>
@@ -30,12 +29,12 @@
 						</a>
 						<div class="post__statistics">
 							<span class="post__comments statistic-info">
-								<i class="fa-solid fa-comment-dots"></i>
-								<span class="post__comments-number"><?php echo get_comments_number(); ?></span>
+								<i class="fa-solid fa-comment-dots statistic-icon"></i>
+								<span class="post__comments-number statistic-number"><?php echo get_comments_number(); ?></span>
 							</span>
 							<span class="post__visits statistic-info">
-								<i class="fa-solid fa-eye"></i>
-								<span class="post__visits-number">125k</span>
+								<i class="fa-solid fa-eye statistic-icon"></i>
+								<span class="post__visits-number statistic-number">125k</span>
 							</span>
 						</div>
 					</div>

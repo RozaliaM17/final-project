@@ -230,3 +230,30 @@ function wp_custom_pagination($args = [], $class = 'pagination') {
     echo sprintf($template, $class, $args['screen_reader_text'], $prev_link, $links, $next_link);
 
 }
+
+/*Register WordPress  Gutenberg CPT */
+function cw_post_type() {
+    register_post_type( 'projects',
+        // WordPress CPT Options Start
+        array(
+            'labels' => array(
+                'name' => __( 'projects' ),
+                'singular_name' => __( 'projects' )
+            ),
+            'has_archive' => true,
+            'public' => true,
+            'rewrite' => array('slug' => 'project'),
+            'show_in_rest' => true,
+            'taxonomies' => array('category'),
+            'supports' => array(
+            	'editor',
+            	'title',
+            	'author',
+            	'excerpt',
+            	'thumbnail',           
+            )
+        )
+    );
+}
+ 
+add_action( 'init', 'cw_post_type' );

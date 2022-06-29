@@ -41,6 +41,7 @@
 		box-shadow: 0px 5px 10px #ff5e149c;
 		transition: all .3s;
 		cursor: pointer;
+		opacity: 1;
 
 		&:hover {
 			box-shadow: 9px 9px 30px -5px #ff5000cc;
@@ -60,9 +61,25 @@
 			padding: 7px 20px;
 		}
 
-		&.price-button {
+		&.price-button,
+		&.career-button {
 			padding: 15px 50px;
 		}
+
+		&.career-button {
+			@media (min-width: 1400px) {
+				font-size: 20px;
+			}
+
+			@media (min-width: 1700px) {
+				font-size: 25px;
+			}
+
+			@media (max-width: 425px) {
+				padding: 10px 35px;
+			}
+		}
+
 
 	}
 
@@ -84,3 +101,53 @@
 		}
 	}
 }
+
+.wp-block-button {
+	.wp-block-button__link {
+		border-radius: 0px;
+		box-shadow: 0px 5px 10px #ff5e149c;
+		transition: all .3s;
+		cursor: pointer;
+
+		&:hover {
+			box-shadow: 9px 9px 30px -5px #ff5000cc;
+			transform: scale(1.03);
+		}
+
+		&:active {
+			box-shadow: 0px 4px 8px #fbaa85;
+			transform: scale(.98);
+		}
+	}
+}
+
+#hero-figure__404 .widget_block  {
+	width: 100%;
+
+	.wp-block-buttons {
+		width: 30%;
+		margin-top: 20px;
+
+		@media (max-width: 600px) {
+			width: 50%;
+		}
+
+		.wp-block-button {
+			width: 100%;
+
+			.wp-block-button__link {
+				width: 100%;
+			} 
+		}
+	}
+}
+
+.footer-column {
+	.wp-block-button__link {
+		width: 80%;
+	}
+}
+
+
+
+

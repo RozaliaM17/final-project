@@ -10,14 +10,10 @@
 get_header(); ?>
 
 	<section class="section-404">
-		<div class="row">
-			<div class="error-404">
-				<h1 class="error-code">404</h1>
-				<h2 class="error-description">There's nothing here...let's find something!</h2>
-
-				<?php get_search_form(); ?>
-			</div>
-		</div>
+		<?php
+			get_template_part( 'template-parts/content', 'hero', array( 'page' => '404' ) );
+			get_template_part( 'template-parts/content', 'partners' );
+		?>
 	</section>
 
 <?php

@@ -7,9 +7,9 @@
       </div>
     <div class="charts-wrapper">
       <div class="single-chart">
-        <div class="chart">
+        <div class="chart dark-theme">
               <div class="value-container">
-                <span class="value-content bold-text dark-theme">75</span>
+                <span class="value-content bold-text">75</span>
                 <sup class="value-percentage bold-text dark-theme">%</sup>
               </div>
           <div class="chart-container">
@@ -34,9 +34,9 @@
         </div>
       </div>
       <div class="single-chart">
-        <div class="chart">
+        <div class="chart dark-theme">
               <div class="value-container">
-                <span class="value-content bold-text dark-theme">90</span>
+                <span class="value-content bold-text">90</span>
                 <sup class="value-percentage bold-text dark-theme">%</sup>
               </div>
           <div class="chart-container">
@@ -61,9 +61,9 @@
          </div>
       </div>
       <div class="single-chart">
-        <div class="chart">
+        <div class="chart dark-theme">
              <div class="value-container ">
-               <span class="value-content bold-text dark-theme">65</span>
+               <span class="value-content bold-text">65</span>
                <sup class="value-percentage bold-text dark-theme">%</sup>
              </div>
           <div class="chart-container">

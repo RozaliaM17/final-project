@@ -36,7 +36,7 @@ get_header(); ?>
 								$wp_query->the_post(); ?>
 								<div class="post__preview-container">
 									<div class="post__image-container">
-										<a class="post__title uppercase-headings bold-text"href="<?php the_permalink(); ?>"><img class="post__image" src="<?php the_post_thumbnail_url(); ?>"></a>
+										<a href="<?php the_permalink(); ?>"><img class="post__image" src="<?php the_post_thumbnail_url(); ?>"></a>
 									</div>
 									<div class="post__content-container">
 											<a class="post__title uppercase-headings bold-text"href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>

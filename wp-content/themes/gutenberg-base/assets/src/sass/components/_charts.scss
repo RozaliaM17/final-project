@@ -1,12 +1,22 @@
-.home .section-information.dark-theme,
-.home .charts-wrapper .single-chart .chart .value-container .value-content.dark-theme,
-.home .charts-wrapper .single-chart .chart .chart-container .circular-chart .circle-bg.dark-theme,
-.home .charts-wrapper .single-chart .chart-information.dark-theme {
+body.home .section-information.dark-theme,
+body.home .chart.dark-theme,
+body.home .chart .chart-container .circular-chart .circle-bg.dark-theme,
+body.home .chart-information.dark-theme,
+body.page-template-service .dark-theme,
+body.page-template-service .chart.dark-theme,
+body.page-template-service .chart .chart-container .circular-chart .circle-bg.dark-theme,
+body.page-template-service .chart-information.dark-theme,
+body.page-template-our-process .dark-theme,
+body.page-template-our-process .chart.dark-theme,
+body.page-template-our-process .chart .chart-container .circular-chart .circle-bg.dark-theme,
+body.page-template-our-process .chart-information.dark-theme, {
       color: #00235A;
       stroke: #F5F5F5;
 }
 
-.home .charts-wrapper .single-chart .chart .value-container .value-percentage.dark-theme {
+body.home .chart .value-container .value-percentage.dark-theme,
+body.page-template-service .chart .value-container .value-percentage.dark-theme,
+body.page-template-our-process .chart .value-container .value-percentage.dark-theme, {
   color: #FF5E14;
 }
 
@@ -49,13 +59,13 @@
       @include flex (row, 0px, center, center);
       width: 80%;
       margin: 0 auto;
+      color: #FEFEFE;
 
       .value-container {
         position: absolute;
 
         .value-content {
           font-size: 52px;
-          color: #FEFEFE;
 
 
           @media (max-width: 800px) {
@@ -70,9 +80,8 @@
         .value-percentage {
           position: absolute;
           font-size: 25px;
-          top: 35px;
+          top: 20px;
           right: -30px;
-          color: #FEFEFE;
 
 
           @media (max-width: 800px) {

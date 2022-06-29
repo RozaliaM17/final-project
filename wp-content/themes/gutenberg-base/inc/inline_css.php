@@ -12,12 +12,13 @@
 		.header-bottom-container, 
 		.mobile-navigation-container, 
 		.hero-service,
-		.team-section,
+		.team__dark-theme,
 		.pricing-plan {
 			background-color: {$main_header_color};
 		}
 
-		.main-footer, 
+		.main-footer,
+		body.page-template-service .dark-bg, 
 		.pricing-page {
 			background-color: {$main_footer_color};
 		}
@@ -28,6 +29,7 @@
 
 		.base-button, 
 		.footer-column .widget_block a,
+		#hero-figure__404 .widget_block a,
 		.partners-section,
 		.card-slider__container, 
 		.__main {

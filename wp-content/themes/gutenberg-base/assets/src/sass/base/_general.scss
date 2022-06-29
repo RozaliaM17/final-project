@@ -285,9 +285,13 @@ figure {
 		text-align: center;
 		font-size: 18px;
 
+		@media (min-width: 1000px) {
+			font-size: 20px;
+		}
+
 		@media (min-width: 1500px) {
 			font-size: 24px;
-			width: 80%;
+			width: 60%;
 		}
 
 		@media (max-width: 900px) {
@@ -298,5 +302,28 @@ figure {
 			font-size: 16px;
 			width: 100%;
 		}
+	}
+}
+
+.__card-grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(200px, 460px));
+	gap: 30px;
+
+	@media (max-width: 800px) {
+		gap: 20px;
+	}
+
+	&.team__card-grid {
+		@media (max-width: 600px) {
+			grid-template-columns: repeat(1, minmax(200px, 460px));
+		}
+	}
+
+	&.project__card-grid {
+		@media (max-width: 640px) {
+			grid-template-columns: repeat(1, minmax(200px, 460px));
+		}
+
 	}
 }

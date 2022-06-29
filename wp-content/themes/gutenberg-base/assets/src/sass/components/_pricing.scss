@@ -1,105 +1,113 @@
+body.page-template-service .dark-bg {
+	background-image: url('../../../assets/src/images/service-pricing.png') ;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	margin: 0% 0% 5% 0%;
+
+}
+
 .pricing-page {
 	background-image: url('../../../assets/src/images/card.png') ;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: contain;
-	padding-bottom: 7%;
+}
 
-	.pricing-section {
-		width: 100%;
-		padding: 10% 0% 12% 0%;
+.pricing-section {
+	width: 100%;
+	padding: 10% 0% 12% 0%;
 
 
-		@media (min-width: 1500px) {
-			padding: 5% 0% 7% 0%;
-		}
+	@media (min-width: 1500px) {
+		padding: 5% 0% 7% 0%;
+	}
 
-		.pricing-container {
-			@include flex (column, 70px, flex-start, center);
+	.pricing-container {
+		@include flex (column, 70px, flex-start, center);
 
-			.pricing-plans-container {
-				@include flex (row, 30px, center, center);
-				flex-wrap: wrap; 
+		.pricing-plans-container {
+			@include flex (row, 30px, center, center);
+			flex-wrap: wrap; 
 
-				.pricing-plan {
-					width: 30%;
-					@include flex (column, 30px, flex-start, center);
+			.pricing-plan {
+				width: 30%;
+				@include flex (column, 30px, flex-start, center);
 
-					padding: 40px 0px;
-					color: #FEFEFE;
-					box-shadow: 0px 19px 33px rgba(111, 109, 113, 0.07);
+				padding: 40px 0px;
+				color: #FEFEFE;
+				box-shadow: 0px 19px 33px rgba(111, 109, 113, 0.07);
+
+				@media (max-width: 700px) {
+					width: 47%;
+				}
+
+				@media (max-width: 530px) {
+					width: 90%;
+				}
+
+
+				.plan__name {
+					font-size: 18px;
+
+
+					@media (min-width: 1500px) {
+						font-size: 24px;
+					}
+				}
+
+				.plan__description {
+					width: 75%;
+					font-size: 14px;
+					text-align: center;
+
+
+					@media (min-width: 1500px) {
+						font-size: 20px;
+					}
 
 					@media (max-width: 700px) {
-						width: 47%;
+						font-size: 16px;
 					}
 
 					@media (max-width: 530px) {
-						width: 90%;
+						width: 50%;
 					}
 
 
-					.plan__name {
-						font-size: 18px;
+				}
 
+				.plan__price {
+					@include flex (row, 10px, center, center);
 
-						@media (min-width: 1500px) {
-							font-size: 24px;
-						}
+					.__price-currency {
+						font-size: 22px;
 					}
 
-					.plan__description {
-						width: 75%;
-						font-size: 14px;
-						text-align: center;
-
-
-						@media (min-width: 1500px) {
-							font-size: 20px;
-						}
-
-						@media (max-width: 700px) {
-							font-size: 16px;
-						}
-
-						@media (max-width: 530px) {
-							width: 50%;
-						}
-
-
+					.__price-value {
+						font-size: 55px;
 					}
+				}
 
-					.plan__price {
-						@include flex (row, 10px, center, center);
+				&.__main {
+					border-bottom: 5px solid #fefefe;
 
-						.__price-currency {
-							font-size: 22px;
+					.price-button {
+						color: #00235A;
+						background-color: #FEFEFE;
+						box-shadow: 0px 5px 10px #ffffff9c;
+						transition: all .3s;
+						cursor: pointer;
+						border-bottom: 4px solid #fff;
+
+						&:hover {
+							box-shadow: 9px 9px 30px -5px #ffffff9c;
+							transform: scale(1.03);
 						}
 
-						.__price-value {
-							font-size: 55px;
-						}
-					}
-
-					&.__main {
-						border-bottom: 5px solid #fefefe;
-
-						.price-button {
-							color: #00235A;
-							background-color: #FEFEFE;
-							box-shadow: 0px 5px 10px #ffffff9c;
-							transition: all .3s;
-							cursor: pointer;
-							border-bottom: 4px solid #fff;
-
-							&:hover {
-								box-shadow: 9px 9px 30px -5px #ffffff9c;
-								transform: scale(1.03);
-							}
-
-							&:active {
-								box-shadow: 0px 4px 8px #b7b7b7;
-								transform: scale(.98);
-							}
+						&:active {
+							box-shadow: 0px 4px 8px #b7b7b7;
+							transform: scale(.98);
 						}
 					}
 				}

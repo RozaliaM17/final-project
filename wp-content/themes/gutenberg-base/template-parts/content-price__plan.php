@@ -1,4 +1,4 @@
-<div class="pricing-section">
+<div class="pricing-section dark-bg">
 	<div class=" row pricing-container">
 		<div class="section-information">
 			<h3 class="__section-category uppercase-headings bold-text ">Price</h3>

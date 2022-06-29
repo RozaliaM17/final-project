@@ -3,12 +3,12 @@
 	background-color: #FEFEFE;
 
 	.about-wraper {
-		padding: 10% 0% 12% 0%;
+		padding: 10% 0% 15% 0%;
 		@include flex (column, 60px, flex-start, center);
 		color: #00235A;
 
 		@media (min-width: 1500px) {
-			padding: 5% 0% 7% 0%;
+			padding: 5% 0% 10% 0%;
 		}
 
 		@media (max-width: 800px) {
