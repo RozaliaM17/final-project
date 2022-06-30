@@ -14,15 +14,13 @@ get_header();
 
 	<section class="section-main">
 			<main class="blog-content">
-				<div class="row">
-					<div class="project-detail__section">
-						<div class="row project-detail-container">
-							<div class="section-information __dark-color">
-								<h3 class="__section-category">Project Detail</h3>
-							</div>
-							<div class="__post-content">
-								<?php the_content() ?>
-							</div>
+				<div class="project-detail__section">
+					<div class="row project-detail-container">
+						<div class="section-information __dark-color">
+							<h3 class="__section-category">Project Detail</h3>
+						</div>
+						<div class="__post-content">
+							<?php the_content() ?>
 						</div>
 					</div>
 				</div>

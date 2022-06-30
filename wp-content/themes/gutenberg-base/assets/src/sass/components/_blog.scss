@@ -207,21 +207,17 @@
 					& > a {
 						@include flex (row, 10px, center, center);
 						color: #fefefe;
-						background-color: #FF5E14;
 						border: none;
 						font-size: 16px;
-						box-shadow: 0px 5px 10px #ff5e149c;
 						transition: all .3s;
 						cursor: pointer;
 						text-decoration: none;
 
 						&:hover {
-							box-shadow: 9px 9px 30px -5px #ff5000cc;
 							transform: scale(1.03);
 						}
 
 						&:active {
-							box-shadow: 0px 4px 8px #fbaa85;
 							transform: scale(.98);
 						}
 
@@ -314,7 +310,6 @@
 							text-decoration: none;
 							border-radius: 2px;
 							font-weight: 400;
-							color: #00235A;
 							opacity: 0.6;
 							font-size: 18px;
 
@@ -328,7 +323,6 @@
 							}
 
 							&.current {
-							color: #FF5E14;
 							opacity: 1;
 							cursor: pointer;
 							font-weight: 700;

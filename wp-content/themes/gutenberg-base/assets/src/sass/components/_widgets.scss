@@ -69,14 +69,10 @@
 		border-bottom: 4px solid #fff;
 
 		&:hover {
-			box-shadow: 9px 9px 30px -5px #ff5000cc;
 			transform: scale(1.03);
-			background-color: #ff5e14;
-			border: 3px solid #ff5e14;
 		}
 
 		&:active {
-			box-shadow: 0px 4px 8px #fbaa85;
 			transform: scale(.98);
 		}
 

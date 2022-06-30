@@ -13,23 +13,20 @@ get_header();
 ?>
 
 	<section class="section-main">
-		<div class="row">
-			<main class="blog-content">
+		<main class="blog-content">
+			<?php
+			while ( have_posts() ) : the_post();
 
-				<?php
-				while ( have_posts() ) : the_post();
+				get_template_part( 'template-parts/content', 'article' );
+				get_template_part( 'template-parts/content', 'blog__slider' );
 
-					get_template_part( 'template-parts/content', 'article' );
-					get_template_part( 'template-parts/content', 'blog__slider' );
+			endwhile; // End of the loop.
+			?>
+		</main>
 
-				endwhile; // End of the loop.
-				?>
-			</main>
-
-			<aside class="blog-sidebar">
-				<?php get_sidebar(); ?>
-			</aside>
-		</div>
+		<aside class="blog-sidebar">
+			<?php get_sidebar(); ?>
+		</aside>
 	</section>
 
 <?php

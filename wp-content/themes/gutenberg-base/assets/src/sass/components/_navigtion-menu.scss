@@ -29,7 +29,7 @@
 			opacity: 0;
 			visibility: hidden;
 			position: absolute;
-			top: 85px;
+			top: 84px;
 			left: 0px;
 			background-color: #fff;
 			padding: 10px 30px;
@@ -41,11 +41,11 @@
 			z-index: 1;
 
 			@media (min-width: 1400px) {
-				top: 88px;
+				top: 87px;
 			}
 
 			@media (min-width: 1700px) {
-				top: 95px;
+				top: 93px;
 			}
 
 			.dropdown-menu-item {
