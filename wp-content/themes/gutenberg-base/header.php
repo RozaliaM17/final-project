@@ -86,10 +86,6 @@ if ( function_exists( 'wp_body_open' ) ) {
 							'theme_location' => 'main-right-menu',
 							'items_wrap' => '<div class="button-container"> %3$s</div>'
 						) ) ?>
-
-						<!-- <div class="button-container">
-							<button class="header-button" type="button">Sign in</button>
-						</div> -->
 					</nav>
 				<!-- Mobile hamburger menu -->
 					<?php if ( has_nav_menu( 'mobile-menu' ) ) { ?>

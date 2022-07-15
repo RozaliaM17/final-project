@@ -1,9 +1,9 @@
 <div class="team-section inner-section team__dark-theme">
 	<div class=" row team-container">
 		<div class="section-information">
-			<h3 class="__section-category uppercase-headings bold-text ">Our teams</h3>
-			<h2 class="__section-title uppercase-headings bold-text">Laboris commodo consequat</h2>
-			<p class="__seciton-paragraph">Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco ci. Voluptate exercitation incididunt aliquip deserunt.</p>
+			<h3 class="section__category">Our teams</h3>
+			<h2 class="section__title">Laboris commodo consequat</h2>
+			<p class="section__paragraph">Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco ci. Voluptate exercitation incididunt aliquip deserunt.</p>
 		</div>
 		<div class="team__card-grid __card-grid">
 			<div class="team-card">

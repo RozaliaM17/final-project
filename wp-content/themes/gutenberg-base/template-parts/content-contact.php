@@ -1,9 +1,9 @@
 <div class="contact-section inner-section">
 	<div class="row contact-container">
 		<div class="section-information form-information">
-			<h3 class="__section-category uppercase-headings bold-text ">Contact Us</h3>
-			<h2 class="__section-title uppercase-headings bold-text">Laborum magna nulla duis</h2>
-			<p class="__seciton-paragraph">Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt aliquip deserunt.</p>
+			<h3 class="section__category">Contact Us</h3>
+			<h2 class="section__title">Laborum magna nulla duis</h2>
+			<p class="section__paragraph">Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt aliquip deserunt.</p>
 		</div>
 		   <img class="slider-card__image" src="../../wp-content/themes/gutenberg-base/assets/dist/images/content.jpg">
 		<div class="contact-form-container">

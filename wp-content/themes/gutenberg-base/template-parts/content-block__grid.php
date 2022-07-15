@@ -1,9 +1,9 @@
 <div class="career-section inner-section">
 	<div class=" row career-container">
 		<div class="section-information">
-			<h3 class="__section-category bold-text ">Career</h3>
-			<h2 class="__section-title bold-text">ullamco laboris commodo consequat</h2>
-			<p class="__seciton-paragraph">Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt aliquip deserunt.</p>
+			<h3 class="section__category __capitalize">Career</h3>
+			<h2 class="section__title __lowercase">ullamco laboris commodo consequat</h2>
+			<p class="section__paragraph">Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt aliquip deserunt.</p>
 		</div>
 		<div class="career__block-grid">
 			<div class="career__block">

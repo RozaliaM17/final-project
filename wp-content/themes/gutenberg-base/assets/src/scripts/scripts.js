@@ -3,7 +3,7 @@ document.addEventListener(
 	() => {
 		// This is where you can add your js.
 		document.addEventListener("scroll", changeHeader);
-		window.addEventListener('resize', dynamicMarginChange);
+		// window.addEventListener('resize', dynamicMarginChange);
 
 		const page = document.querySelector(".site");
 		const pageHeader = document.querySelector('.site-header');
@@ -14,31 +14,29 @@ document.addEventListener(
 		const rowClassSection = document.querySelector(".footer-columns-wraper");
 		const heroServiceFigure = document.querySelector(".hero-figure__service");
 		const blogSliderContainer = document.querySelector('.blog-slider__section');
-
 		const siteContent = document.querySelector(".site-content");
-
 		const heroHomeFigure = document.querySelector('#hero-figure__home');
 		const heroAboutFigure = document.querySelector('#hero-figure__about');
+		const cardSliderControls = document.querySelectorAll('.tab-slider__control');
+		const sliderCard = document.querySelectorAll('.tab-slider__card');
 
-		const cardSliderControls = document.querySelectorAll('.slider-control');
-
-		const sliderCard = document.querySelectorAll('.slider-card');
-
+		// Tab slider
 		for (var i = 0; i < cardSliderControls.length; i++) {
 			cardSliderControls[i].addEventListener('click', () =>{
 				const cardId = event.target.dataset.id;
 				for (var i = 0; i < sliderCard.length; i++) {
 					if(sliderCard[i].id === cardId) {
-						sliderCard[i].classList.add('active');
-						cardSliderControls[i].classList.add('active');
+						sliderCard[i].classList.add('js-is-shown');
+						cardSliderControls[i].classList.add('js-is-shown');
 					} else {
-						sliderCard[i].classList.remove('active');
-						cardSliderControls[i].classList.remove('active');
+						sliderCard[i].classList.remove('js-is-shown');
+						cardSliderControls[i].classList.remove('js-is-shown');
 					}
 				}
 			})
 		}
 
+		// Change header style, when scroll
 		function changeHeader() {
 		let pageHeaderHeight = pageHeader.clientHeight;
 		  if (window.scrollY >= 33) {
@@ -61,23 +59,24 @@ document.addEventListener(
 		  }
 		}
 
-		function dynamicMarginChange() {
-			const rowMargin = getComputedStyle(rowClassSection);
-			let marginLeft = rowMargin.marginLeft;
+		// // Dynamicaly change the elements margin
+		// function dynamicMarginChange() {
+		// 	const rowMargin = getComputedStyle(rowClassSection);
+		// 	let marginLeft = rowMargin.marginLeft;
 
-				if (typeof(blogSliderContainer) != 'undefined' && blogSliderContainer != null) {
-				 	blogSliderContainer.style.marginLeft = marginLeft;
-				}
-				if (typeof(heroServiceFigure) != 'undefined' && heroServiceFigure != null) {
-				 	heroServiceFigure.style.marginLeft = marginLeft;
-				}
-				if (typeof(heroHomeFigure) != 'undefined' && heroHomeFigure != null) {
-				 	heroHomeFigure.style.marginRight = marginLeft;
-				}
-				if (typeof(heroAboutFigure) != 'undefined' && heroAboutFigure != null) {
-				 	heroAboutFigure.style.marginLeft = marginLeft;
-				}
-		}
+		// 		if (typeof(blogSliderContainer) != 'undefined' && blogSliderContainer != null) {
+		// 		 	blogSliderContainer.style.marginLeft = marginLeft;
+		// 		}
+		// 		if (typeof(heroServiceFigure) != 'undefined' && heroServiceFigure != null) {
+		// 		 	heroServiceFigure.style.marginLeft = marginLeft;
+		// 		}
+		// 		if (typeof(heroHomeFigure) != 'undefined' && heroHomeFigure != null) {
+		// 		 	heroHomeFigure.style.marginRight = marginLeft;
+		// 		}
+		// 		if (typeof(heroAboutFigure) != 'undefined' && heroAboutFigure != null) {
+		// 		 	heroAboutFigure.style.marginLeft = marginLeft;
+		// 		}
+		// }
 
 		// Toggle the Mobile menu
 		mobileMenuButton.addEventListener('click', toggleMobileMenu);
@@ -100,7 +99,7 @@ document.addEventListener(
 			siteContent.style.marginTop = pageHeaderHeight + 'px';
 		});
 
-		dynamicMarginChange();
+		// dynamicMarginChange();
 
 		resizeObserver.observe(pageHeader);
 

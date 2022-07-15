@@ -1,0 +1,83 @@
+.carousel {
+	@include flex (column, 2.5rem, flex-start, flex-start);
+	overflow-x: hidden;
+	margin-right: 0; 
+
+	&__header {	
+		align-items: flex-start;
+		gap:  0.9375rem;
+		color: #00235A;
+		width: 100%;
+	}
+
+	.sliders {
+		display: grid;
+		grid-auto-flow: column;
+		column-gap: 1.875rem;
+		overflow-x: auto;
+		overscroll-behavior-x: contain;
+		scroll-snap-type: x mandatory;
+		scrollbar-width: 100px;
+		width: 100%;
+		margin-left: auto;
+		cursor: pointer;
+		padding-bottom: 1.875rem;
+		padding-right: 1.25rem;
+
+		&::-webkit-scrollbar {
+		  width: 2px;
+		}
+
+		&::-webkit-scrollbar-track {
+		  background: transparent;
+		}
+
+	}
+
+	&__box {
+		width: 28.125em;
+		scroll-snap-align: end;
+		@include flex (column, 0px, center, center);
+		box-shadow: 0px 10px 15px 0px rgba(111, 109, 113, 0.13);
+	}
+
+	&__information-container {
+		@include flex (column, 0.625rem, flex-start, flex-start);
+		color: #00235A;
+		background-color: #fff;
+		padding: 0.9375rem;
+		width: 100%;
+
+		@media (min-width: 1900px) {
+			padding: 1.875rem;
+		}
+	}
+
+	&__category {
+		font-size: 1em;
+		text-transform: uppercase;
+		font-weight: var(--bold);
+	}
+
+	&__title {
+		font-size: 1.75em;
+		text-transform: uppercase;
+		font-weight: var(--bold);
+	}
+
+	&__statistics {
+		@include flex (row, 1.875rem, flex-start, center);
+	}
+
+	&__info {
+		@include flex (row, 0.625rem, flex-start, baseline);
+	}
+
+	&__icon {
+		font-size: 1.25em;
+	}
+
+	&__number {
+		font-size: 1.125em;
+	}
+}

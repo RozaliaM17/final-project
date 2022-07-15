@@ -26,7 +26,6 @@
 			'description'   => '',
 		) );
 
-
 		// Footer columns
 
 		register_sidebar( array(

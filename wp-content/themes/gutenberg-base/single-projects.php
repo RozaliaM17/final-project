@@ -17,7 +17,7 @@ get_header();
 				<div class="project-detail__section">
 					<div class="row project-detail-container">
 						<div class="section-information __dark-color">
-							<h3 class="__section-category">Project Detail</h3>
+							<h3 class="section__category __capitalize">Project Detail</h3>
 						</div>
 						<div class="__post-content">
 							<?php the_content() ?>
@@ -26,7 +26,7 @@ get_header();
 				</div>
 				<?php
 				while ( have_posts() ) : the_post();
-					get_template_part( 'template-parts/content', 'blog__slider' );
+					get_template_part( 'template-parts/content', 'carousel' );
 
 				endwhile; // End of the loop.
 				?>

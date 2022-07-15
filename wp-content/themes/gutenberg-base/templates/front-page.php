@@ -36,11 +36,11 @@ get_header(); ?>
 				while ( have_posts() ) : the_post();
 					get_template_part( 'template-parts/content', 'hero', array( 'page' => 'home' ) );
 					get_template_part( 'template-parts/content', 'about' ); 
-					get_template_part( 'template-parts/content', 'service' );
+					get_template_part( 'template-parts/content', 'service');
 					get_template_part( 'template-parts/content', 'partners' );
-					get_template_part( 'template-parts/content', 'blog__slider' );
-					get_template_part( 'template-parts/content', 'charts' );
-					get_template_part( 'template-parts/content', 'card__slider' );
+					get_template_part( 'template-parts/content', 'carousel' );
+					get_template_part( 'template-parts/content', 'charts', array( 'page' => 'home' ));
+					get_template_part( 'template-parts/content', 'tab__slider' );
 
 				endwhile; // End of the loop.
 				?>

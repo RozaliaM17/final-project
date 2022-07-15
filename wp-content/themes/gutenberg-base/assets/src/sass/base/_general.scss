@@ -64,6 +64,7 @@ h6 {
 
 p {
 	margin-bottom: 1.5em;
+	max-width: 90%;
 }
 
 dfn,
@@ -148,7 +149,7 @@ p:last-child {
 
 a {
 	color: var(--color-primary-hsl);
-	// text-decoration: none;
+	text-decoration: none;
 }
 
 h1,
@@ -184,6 +185,10 @@ ol,
 ul {
 	margin: 0;
 	padding: 0;
+	list-style-type: none;
+}
+
+li {
 	list-style-type: none;
 }
 
@@ -231,78 +236,42 @@ figure {
 	outline: 0;
 }
 
-.uppercase-headings {
+.section__category {
+	font-weight: var(--bold);
+	text-transform: uppercase;
+	font-size: 1.25em;
+}
+
+.section__title {
+	font-size: 1.75em;
 	text-transform: uppercase;
 }
 
-.bold-text {
-	font-weight: 700;
+.section__paragraph {
+	max-width: 70%;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 1.125em;
 }
 
-.__section-category {
-	font-size: 18px;			
+.__lowercase {
+	text-transform: lowercase;
 }
 
-.section-information {
+.__capitalize {
+	text-transform: capitalize;
+}
+
+.__text-end {
+	text-align: end;
+}
+
+.section__information {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: center;
 	gap: 20px;
-	color: #FEFEFE;
-
-	&.__align-left {
-		align-items: flex-start;
-	}
-
-	.__section-category {
-		font-size: 18px;
-
-		@media (min-width: 1500px) {
-			font-size: 20px;
-		}
-	}
-
-	.__section-title {
-		font-size: 28px;
-
-		@media (min-width: 1500px) {
-			font-size: 30px;
-		}
-
-		@media (max-width: 900px) {
-			font-size: 25px;
-		}
-
-		@media (max-width: 600px) {
-			font-size: 20px;
-		}
-	}
-
-	.__seciton-paragraph {
-		width: 70%;
-		margin: 0 auto;
-		text-align: center;
-		font-size: 18px;
-
-		@media (min-width: 1000px) {
-			font-size: 20px;
-		}
-
-		@media (min-width: 1500px) {
-			font-size: 24px;
-			width: 60%;
-		}
-
-		@media (max-width: 900px) {
-			width: 90%;
-		}
-
-		@media (max-width: 600px) {
-			font-size: 16px;
-			width: 100%;
-		}
-	}
 }
 
 .__card-grid {

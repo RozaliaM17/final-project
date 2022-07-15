@@ -1,0 +1,39 @@
+.service {
+	align-items: flex-start;
+	text-align: start;
+	gap: 1.25rem;
+
+	&__content-container {
+		@include flex (column, 2rem, flex-start, flex-start);
+		margin-top: 1.25rem;
+	}
+
+	&__block {
+		display: flex;
+		align-items: center;
+		gap: 3.5rem;
+
+		@media (max-width: 800px) {
+			gap: 2rem;
+		}
+	}
+
+	&__image-container {
+		@include flex (row, 0rem, center, center);
+
+		img {
+			max-width: unset;
+		}
+	}
+
+	&__title {
+		width: 100%;
+		text-transform: uppercase;
+		font-size: 1.25em;
+	}
+
+	&__paragraph {
+		margin-block-start: 0.625rem;
+		font-size: 1.125em;
+	}
+}

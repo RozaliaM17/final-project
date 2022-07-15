@@ -1,16 +1,17 @@
-// @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
-
 @font-face {
   font-family: "lato";
-  src: url("../../src/fonts/Lato2OFL/Lato-Black.ttf") format("trueType"),
+  src: url("../../src/fonts/Lato2OFL/Lato-Black.ttf") format("trueType");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "lato";
-  src: url("../../src/fonts/Lato2OFL/Lato-Medium.ttf") format("trueType"),
+  src: url("../../src/fonts/Lato2OFL/Lato-Medium.ttf") format("trueType");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "lato";
-  src: url("../../src/fonts/Lato2OFL/Lato-Light.ttf") format("trueType"),
+  src: url("../../src/fonts/Lato2OFL/Lato-Light.ttf") format("trueType");
+  font-display: swap;
 }

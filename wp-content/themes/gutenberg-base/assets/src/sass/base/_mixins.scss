@@ -15,3 +15,26 @@
 	align-items: $align;
 }
 
+@mixin large {
+	@media (max-width: #{$media-breakpoint-large}) {
+		@content;
+	}
+}
+
+@mixin scrolling-animation {
+	@media (min-width: #{$media-breakpoint-medium}) {
+		@content;
+	}
+}
+
+@mixin small{
+	@media (max-width: #{$media-breakpoint-small}) {
+		@content;
+	}
+}
+
+@mixin mobile {
+	@media (max-width: #{$media-breakpoint-mobile}) {
+		@content;
+	}
+}

@@ -23,8 +23,8 @@ get_header(); ?>
 				<?php
 				while ( have_posts() ) : the_post();	
 					get_template_part( 'template-parts/content', 'about' ); 
-					get_template_part( 'template-parts/content', 'charts' );
-					get_template_part( 'template-parts/content', 'card__slider' );
+					get_template_part( 'template-parts/content', 'charts', array( 'page' => 'process' ) );
+					get_template_part( 'template-parts/content', 'tab__slider' );
 
 				endwhile; // End of the loop.
 				?>

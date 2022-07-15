@@ -1,14 +1,11 @@
-.partners-section {
-	.partners-wraper {
-		width: 90%;
+.partners {
+	&__wrapper {
+		max-width: 90%;
 		margin: 0 auto;
-		background-image: url('../../../assets/src/images/w-card.png') ;
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: cover;
 		height: 100%;
 		overflow: hidden;
 		@include flex (row, 0px, center, center);
+		position: relative;
 
 		@media (max-width: 900px) {
 			width: 100%;
@@ -17,11 +14,29 @@
 		@media (max-width: 600px) {
 			background-size: contain;
 		}
+	}
 
-		.partnets-logo-container {
-			width: 100%;
-			@include grid (repeat(auto-fit, minmax(120px, 1fr)), unset, 0px, unset, unset);
-			padding: 40px 0px;
-		}
+	&__cover {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		max-width: 90%;
+		margin: 0 auto;
+		background-image: url('../../../assets/src/images/card.png') ;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+
+	&__logo-container {
+		width: 100%;
+		@include grid (repeat(auto-fit, minmax(150px, 1fr)), unset, 0px, unset, unset);
+		padding: 40px 0px;
+	}
+
+	&__logo {
+
 	}
 }

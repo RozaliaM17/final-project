@@ -35,8 +35,8 @@
 		.base-button, 
 		.footer-column .widget_block a,
 		#hero-figure__404 .widget_block a,
-		.partners-section,
-		.card-slider__container, 
+		.partners,
+		.tab-slider__container, 
 		.__main, 
 		.pagination .nav-links > a {
 			background-color: {$second_main_color};
@@ -45,32 +45,32 @@
 		.site-title, 
 		.site-subtitle,
 		border,
-		body.home .chart .value-container .value-percentage.dark-theme,
-		body.page-template-service .chart .value-container .value-percentage.dark-theme,
-		body.page-template-our-process .chart .value-container .value-percentage.dark-theme, 
+		.charts__value-percentage.charts__dark-home,
+		.charts__value-percentage.charts__dark-service,
+		.charts__value-percentage.charts__dark-process,
 		.form-icon,
 		.current {
 			color: {$second_main_color};
 		}
 
-		.about-card, 
+		.about__card, 
 		.project-card {
 			border-bottom:4px solid {$second_main_color};
 		}
 
-		.about__paragraph-container,
+		.about__paragraph,
 		.wp-block-quote {
 			border-left: 3px solid {$second_main_color};
 		}
 
-		.circle {
+		.charts__circle {
 			stroke: {$second_main_color};
 		}
 
 		.base-button,
 		.wp-block-button__link,
 		.pagination .nav-links > a  {
-			box-shadow: 0px 5px 10px {$second_main_color};
+			box-shadow: 5px 5px 9px -3px {$second_main_color};
 		}
 
 		.base-button:hover,
@@ -78,7 +78,7 @@
 		.pagination .nav-links > a:hover,
 		#hero-figure__home a:hover,
 		#hero-figure__about a:hover  {
-			box-shadow: 7px 7px 32px -3px {$second_main_color};
+			box-shadow: 5px 5px 20px -3px {$second_main_color};
 		}
 
 		#hero-figure__home a:hover,

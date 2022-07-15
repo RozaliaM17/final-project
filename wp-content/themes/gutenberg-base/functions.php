@@ -40,7 +40,6 @@ require get_template_directory() . '/inc/images.php';
 /** 
  * Enqueue Assets
 */
-
 require get_template_directory() . '/inc/enqueue-assets.php';
 
 /** 
